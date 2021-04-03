@@ -1,7 +1,6 @@
 FROM nvcr.io/nvidia/pytorch:20.11-py3 
 SHELL ["/bin/bash", "-c"]
 
-
 WORKDIR /workspace/source
 
 ARG HTTP_PROXY
@@ -23,7 +22,7 @@ RUN apt -y install  vim \
   unzip \
   vim \
   tmux 
-
+ADD requirements.txt /workspace/source
 RUN pip3 install -r requirements.txt
 
 ENV NVIDIA_VISIBLE_DEVICES all

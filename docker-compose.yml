@@ -16,6 +16,7 @@ services:
     ipc: host
     volumes: 
       - ./:/workspace
+      - ${data_path}:/data
     tty: true
     restart: always
     deploy:

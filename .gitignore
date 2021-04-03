@@ -1,2 +1,3 @@
 *.bin
 special_thanks.txt
+__pycache__
